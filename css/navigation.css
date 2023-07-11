@@ -1,0 +1,95 @@
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500&display=swap');
+        @import url(./fontawesome-free-6.4.0-web/css/all.min.css);
+        body{
+            font-family: 'Noto Serif TC', serif;
+        }
+        .fw-700{
+            font-weight: 700;
+        }
+        .fw-900{
+            font-weight:900;
+        }
+        /* Fixed top */
+        #navbarToggleExternalContent a{
+            text-decoration: none;
+            color: #E5E5CB;
+        }
+
+        .container a{
+            text-decoration: none;
+            color: blue;
+        }
+        #top:hover{
+            color: #DC5F00;
+        }
+        #navbar{
+            margin-bottom: 6rem;
+        }
+
+        #menu:hover{
+            color: #9575DE;
+        }
+
+        .bg-cover{
+            height: 300px;
+            background-position: top center;
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        .timeline-section{
+            position: relative;
+        }
+        .timeline-section:before{
+            position: absolute;
+            background-color: var(--color003);
+            content: "";
+            width: 3px;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .timeline-section-pointer{
+            position: relative;
+        }
+        .timeline-section-pointer:before{
+            position: absolute;
+            content: "";
+            background-color: whitesmoke;
+            width: 10px;
+            height: 10px;
+            top: 0;
+            bottom: 0;
+            border: 2px solid var(--color002);
+            border-radius: 50%;
+        }
+        .timeline-section-pointer:hover:before{
+            position: absolute;
+            width: 15px;
+            height: 15px;
+            transform: translateX(1px);
+        }
+        /* RWD */
+        @media screen and (max-width:768px){
+            .timeline-section:before{
+            position: absolute;
+            background-color: var(--color003);
+            content: "";
+            width: 3px;
+            top: 0;
+            bottom: 0;
+            left: -1.5%;
+            transform: translateX(-50%);
+            }
+            .timeline-section-pointer:before{
+                display: none;
+            }
+            .timeline-section-pointer:hover:before{
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                transform: scale(1.5);
+                transform: translateX(-2px);
+            }
+            
+        }
